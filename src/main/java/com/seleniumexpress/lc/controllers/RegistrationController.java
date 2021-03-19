@@ -10,18 +10,21 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.seleniumexpress.lc.api.CommunicationDTO;
 import com.seleniumexpress.lc.api.Phone;
 import com.seleniumexpress.lc.api.UserRegistrationDTO;
-import com.seleniumexpress.lc.propertyeditor.NamePropertyEditor;
 import com.seleniumexpress.lc.validator.EmailNameValidator;
 import com.seleniumexpress.lc.validator.UserNameValidator;
 
 @Controller
+//@RestController
+@CrossOrigin(origins = "http://localhost:8081")
 public class RegistrationController {
 	
 	@Autowired

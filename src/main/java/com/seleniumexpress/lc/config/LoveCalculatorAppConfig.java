@@ -22,7 +22,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.seleniumexpress.lc.api.fomatter.PhoneNumberFormatter;
 
-@EnableWebMvc
+//@EnableWebMvc
 @Configuration
 @ComponentScan(basePackages= {"com.seleniumexpress.lc"})
 @PropertySource("classpath:email.properties")
@@ -42,6 +42,15 @@ public class LoveCalculatorAppConfig implements WebMvcConfigurer {
 		
 		return viewResolver;		
 	}
+//    @Override
+//    public void configureViewResolvers(ViewResolverRegistry registry) {
+//       registry.jsp("/WEB-INF/views/", ".jsp");
+//    }
+//
+//    @Override
+//    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+//        configurer.enable();
+//    }
 	
 	@Bean
 	public MessageSource messageSource() {
